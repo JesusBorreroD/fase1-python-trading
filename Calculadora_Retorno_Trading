@@ -1,0 +1,33 @@
+import math
+
+# Funciones
+
+
+def pedir_float(mensaje):
+    try:
+        return float(input(mensaje))
+    except ValueError:
+        print("Ingresa un número válido. ")
+        exit()
+
+
+# Entrada de datos
+p_in = pedir_float("Ingrese precio de entrada del activo: ")
+p_out = pedir_float("Ingrese precio de salida del activo: ")
+capital = pedir_float("Ingrese el valor del capital invertido: ")
+
+# Cálculos
+pnl = ((p_out - p_in)/p_in)*capital
+retorno_simple = ((p_out - p_in)/p_in)*100
+retorno_logaritmico = math.log(p_out/p_in)*100
+resultado = "GANADORA" if retorno_logaritmico > 0 else "PERDEDORA"
+
+# Salida
+print(f"\n---- Resumen de la Operacion ----")
+print(f"Capital invertido:            ${capital:.2f}")
+print(f"Precio entrada:               ${p_in:.2f}")
+print(f"Precio salida:                ${p_out:.2f}")
+print(f"Ganancia/Pérdida:             ${pnl:.2f}")
+print(f"Retorno simple:                {retorno_simple:.2f}%")
+print(f"Retorno logarítmico:           {retorno_logaritmico:.2f}%")
+print(f"resultado:                     {resultado}")
