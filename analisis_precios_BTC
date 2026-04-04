@@ -33,8 +33,7 @@ print(f"Días alcistas :           {alcista}")
 print(f"Días bajistas :           {bajista}")
 print(f"Retorno promedio diario : {promedio:.2f}%")
 print(
-    f"Mejor día : ${precios[major]:,} → {precios[major + 1]:,} | +{max(retornos):.2f}%")
+    f"Mejor día : ${precios[major]:,} → ${precios[major + 1]:,} | +{max(retornos):.2f}%")
 print(
-    f"Peor día  : ${precios[minor]:,} → {precios[minor + 1]:,} | {min(retornos):.2f}%")
+    f"Peor día  : ${precios[minor]:,} → ${precios[minor + 1]:,} | {min(retornos):.2f}%")
 print(f"Retorno acumulado total : {sum(retornos):.2f}%")
-print("---------fsdfw   wfwerqwerwqerqwerwerwqer")
